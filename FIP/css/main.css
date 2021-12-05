@@ -1,0 +1,867 @@
+/*
+Web Name: Review Yard
+Style Name: HTML Atributes & Forms 
+Description: Final Integrated Project - Review Yard
+Author: Immama Ayoub
+Version: 1.0
+Tags: Learning HTML
+*/
+
+/*-------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+    overflow-x: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: orange;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
+
+/* _________________________________________
+
+            FIP - REVIEW YARD
+___________________________________________ */
+/* 01. General Styles
+       - Global
+   02. CSS Grid
+   03. Site Header
+       - Header
+       - Nav Styling
+       - Hero Image
+       - Review Title
+       - Review Content
+       - All Products Section
+       - Top Products Section
+       - Subscribe Box - Homepage
+       - Specs
+       - Rate Bar
+       - Pros & Cons
+       - Contact Form
+       - Products
+       - About
+   04. Site Footer                       
+/* _____________________________________
+
+/* _____________________________________
+
+   01. General Styles
+   _____________________________________ */
+
+:root{
+    -main-colour: #27AAE1;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   background-attachment: fixed;
+   background-size: cover;
+   display: grid;
+   align-items: center;
+   justify-content: center;
+   color: rgb(60, 60, 60);
+   overflow-x: hidden;
+    
+}
+
+ 
+
+/* ___________________________________________
+
+       CSS Guide
+___________________________________________ */
+
+/* 01. General Styles                        
+   02. CSS Grid                           
+/* _____________________________________
+
+   01. General Styles
+   _____________________________________ */
+
+   /*-----GLOBAL-------------*/
+
+   .hidden {
+       display: none;
+   }
+
+   .box-modelc {
+      padding: 1em;
+      background: #FDFEFF;
+   }
+   .box-modelb {
+       padding: 1em;
+       background: #27AAE1;
+   }
+
+   .box-model { 
+       padding: 3rem;
+       background: #000;
+   }
+   .box-modelf {
+       padding: 0.8em;
+       background: #e2dfdf
+   }
+
+   section {
+      margin: 3rem 0;
+   }
+
+   .margin-tb {
+       margin: 2em 0 4em;
+    }
+    .margin-top{
+        margin-top: 1em;
+    }
+
+    .margin-top-less {
+        margin-top: -20px;
+    }
+    .margin-btm {
+        margin-bottom: -5em;
+    }
+
+    .margin-left {
+        margin-left: -1.5em;
+    }
+
+    .margin-font-pagehead {
+        margin: 80px 750px 5px 95px;
+        font-size: 50px;
+        font-family: myriad-pro, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        
+    }
+
+    .rev-link-font {
+        font-size: 84px;
+        font-family: myriad-pro, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .marginblacksmall {
+        margin: 5px 1238px 0px 70px;
+        position: relative;
+        bottom: 2px;
+    }
+
+    .marginblacksmall2 {
+        margin: 5px 1438px 0px 70px;
+        position: relative;
+        bottom: 2px;
+    }
+
+    .marginbluelong {
+        margin: 2px 70px 10px 70px;
+        position: absolute;
+        top: 372px;
+    }
+
+    .marginblue {
+        margin: 3px 70px 10px 70px;
+        position: relative;
+        top: 45px;
+    }
+
+    .margin-autocontent {
+        margin: 2em 3em 2em 3em;
+    }
+
+    .margin-feat-rev {
+        margin: 2em 5em 2em 5em;
+    }
+
+    .margin-autoimg {
+        margin: 0.5em 3em;
+        margin-right: 3em;
+    }
+
+    .bold-text {
+        font-weight: bold; 
+    }
+
+    .margin-autoh {
+        margin: 15px 750px 5px 120px
+    }
+
+    .margin-feat {
+        margin: 15px 145px 5px 120px;
+    }
+
+    .margin-proscons {
+        margin: 2em 3em 2em 3em;
+    }
+
+    .bluerectbold {
+        background: #27AAE1;
+        padding: 15px 852px;
+    }
+
+    .blackrects {
+        display: flexbox;
+        background: black;
+        padding: 1.5px 30px 30px 30px;
+    }
+
+    .font-rate-bar {
+        font-size: 30px;
+        font-family: myriad-pro, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        margin-left: 6em;
+    }
+
+    .score {
+        background: #e2dfdf;
+        margin-bottom: -2em;
+        font-size: 30px;
+        font-family: myriad-pro, sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        margin-left: 6em;
+        margin-right: 43em;
+        padding: 2px;
+    }
+
+/* _____________________________________
+
+   02. CSS Grid
+   _____________________________________ */
+
+   @supports (grid-area: auto) {
+
+        .site {
+         max-width: none;
+        }
+
+      /*------------ Grid Items ------------*/
+        .head, .main > *, .foot {
+         display: grid;
+		 grid-template-columns: 1fr repeat(2, minmax(auto, 35em)) 1fr;
+        }
+        
+        .one-item {
+            display: grid;
+            grid-column: 2 / span 2;
+            grid-template-columns: 1fr;
+            justify-self: center;
+        }
+        
+        .two-items {
+            display: grid;
+            grid-column: 2 / span 2;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: space-evenly;
+            grid-column-gap: 6em;
+            row-gap: 4em;
+        }
+
+        .three-itemfoot {
+            display: grid;
+            grid-column: 2 / span 2;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-evenly;
+            grid-column-gap: 8em;
+            row-gap: 2em;
+        }
+
+        .three-items {
+            display: grid;
+            grid-column: 2 / span 2;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: space-evenly;
+            grid-column-gap: 2em;
+            row-gap: 1em;
+        }
+
+        .four-items {
+            display: grid;
+            grid-column: 2 / span 2;
+            grid-template-columns: repeat(4, 1fr);
+            grid-column-gap: 1em;
+            row-gap: 1em;
+        }
+
+      /*------------ End Grid Items ------------*/
+
+/*_____________________________________________
+
+   Header
+_______________________________________________*/
+
+        header {
+            position: sticky;
+            background-color: black;
+        }
+
+        .logo {
+            grid-column: 1/ span 1;
+        }
+
+        .logo img {
+            padding: 1em;
+            margin-left: 4em;
+            width: 80%;
+        }
+
+
+        /*----------Start Nav Styling-------------*/
+        .nav {
+            grid-column: 2 /span 3;
+            padding-top: 3em;
+            margin: 0em;
+        }
+
+        nav ul {
+            margin: 2em;
+            padding: 0;
+            text-decoration: none;
+            text-align: end;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 4em;
+        }
+
+        nav li a {
+            text-decoration: none; 
+            color: #FDFEFF;
+            font-size: 35px;
+        }
+
+        nav li a:hover {
+            display: inline-block;
+            position: relative;
+            color: #27AAE1
+        }
+
+        nav li a:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #0087ca;
+            transform-origin: bottom right;
+            transition: transform 0.26s ease-out;
+        }
+        
+        nav li a.active {
+            padding-bottom: .2em;
+            border-bottom: 3px solid #0087ca;
+        }
+        /*----------END Nav Styling-------------*/
+
+
+      /*------------- Start Hero ------------*/
+        .hero-img {
+            margin-top: 8px;
+        }
+      /*------------ End Hero ------------*/
+
+     /*------------- Start Review title ------------*/
+
+        .revtitle {
+            background: #27AAE1;
+            padding: 50px 30px;
+            font-size: 60px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: 700;
+        }
+
+        .rev_head_img {
+            width: 1400px;
+            height: auto;
+            object-fit: fill;
+            margin: auto;
+        }
+
+        .content_page {
+            background: #27AAE1;
+            padding: 0.5px 30px;
+            font-size: 40px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .featcont {
+            padding: 0.5px 30px;
+            font-size: 40px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+       /*------------- End Review Title ------------*/
+
+       /*------------- Start Review Content ------------*/
+
+        .review a:hover {
+            display: inline-block;
+            position: relative;
+            color: #27AAE1
+        }
+
+        .review a:after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #0087ca;
+        }
+
+        .img-pos {
+            width: 800px;
+            height: auto;
+            object-fit: contain;
+            margin: auto;
+        }
+        .review h3 {
+            font-size: 60px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin: 0.2em 1em -0.5em 1.8em;
+        }
+        .tp-pro h3 {
+            font-size: 40px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin: 0.2em 1em -0.5em 2.5em;
+        }
+       /*------------- End Review Content ------------*/
+
+        /*------------- Start ALL Products Section ------------*/
+        .prod-img-pos {
+            width: 300px;
+            height: auto;
+            object-fit: contain;
+            margin: 40px;
+            margin-left: 4.5em;
+        }
+        .prodsec a {
+            background: #27AAE1;
+            font-size: 19px;
+            font-family: myriad-pro, sans-serif;
+            color: black;
+            font-style: normal;
+            font-weight: bold;
+            margin-left: 4.8em;
+            padding: 1em;
+        }
+        /*------------- END ALL Products Section ------------*/
+
+       /*------------- Start Top Products Section ------------*/
+        .tb-pro {
+            background: #f1f1f1;
+            font-size: 30px;
+            color: black;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            padding: 12px;
+            margin: 10em 0em -4em 49em;
+
+        }
+        
+        .product a {
+            background: #27AAE1;
+            margin: 5em;
+            padding: 10px 15px;
+            color: black;
+            font-size: 30px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: bolder;
+        }
+        .product img {
+            padding: 3px;
+            margin-left: 2em;
+        }
+        /*------------- End Top Products Section ------------*/
+
+        /*------------- Start Subscribe Box - Homepage ------------*/
+        .sec h3 {
+            background: #FDFEFF;
+            display: table;
+            padding: 18px 30px;
+            margin: 0.5em 0em -2em 2em;
+            font-size: 65px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: bolder;
+        }
+        
+        .subscribe-h {
+            margin-left: 49em;
+            background-color: #27AAE1;
+            max-width: 930px;
+            width: 100%;
+            position: relative;
+            border-radius: 80px;
+        }
+        
+        .subscribe-h input {
+            background: #27AAE1;
+            width: 100%;
+            padding: 40px 0px 40px 34px;
+            border: none;
+            border-radius: 60px;
+            font-size: 40px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: bolder;
+        }
+
+        .s-btn {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background: #000;
+            padding: 25px 70px;
+            border-radius: 50px;
+            color: #FDFEFF;
+            font-size: 45px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: bolder;
+            cursor: pointer;   
+        }
+        /*------------- END Subscribe Box - Homepage ------------*/
+
+
+       /*------------- Start Specs ------------*/
+
+       .specs img {
+           padding: 3em;
+           margin-left: 10em;
+           width: 80%;
+        }
+       /*------------- End Specs ------------*/
+
+      /*------------Start bar rating--------*/
+
+        .left {
+            float: left;
+            width: 70%;
+            margin-top: 1.5em;
+            margin-right: 16em;
+        }
+
+        .right {
+            display: table;
+            margin-right: 3em;
+            text-align: right;
+            font-size: 2em;
+        }
+
+        .right p {
+            background: #f1f1f1;
+            padding: 15px 50px 15px 50px;
+        }
+
+        .bar-row::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        .bar-cont {
+            margin-left: 10em;
+            width: 70%;
+            background-color: #f1f1f1;
+            text-align: center;
+            color: #FDFEFF;
+        }
+
+        .rate {
+            width: 90%; height: 70px; background-color: #27AAE1;}
+
+      /*------------End bar rating--------*/
+
+      /*------------- Start PROS ------------*/
+        .prosbox {
+            background: #27AAE1;
+            padding: 0.5px 30px 20px 30px;
+            margin: 32px 44px 4px 128px;
+        }
+
+        .pros p {
+            font-size: 20px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: 200;
+        }
+        .phead p {
+            font-size: 40px;
+            font-weight: 550;
+
+        }
+      /*------------- END  PROS ------------*/
+
+      /*------------- Start CONS ------------*/
+        .consbox {
+            background: black;
+            padding: 0.5px 30px 20px 30px;
+            margin: 32px 160px 4px -4px;
+        }
+
+        .cons p {
+            color: #27AAE1;
+            font-size: 20px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: 200;
+
+        }
+        .chead p {
+            font-size: 40px;
+            font-weight: 550;
+        }
+      /*-------------  END CONS ------------*/
+
+      /*-------------  START CONTACT FORM ------------*/
+        .cont-form {
+            justify-content: flex-start;
+            margin: auto;
+        }
+        .cont-form p {
+            font-size: 40px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+        }
+        input {
+            display: grid;
+            padding: 20px 20px 50px 20px;
+            border: 2px solid #000;
+            background-color: #FDFEFF;
+            width: 948px;
+            justify-content: space-evenly;
+        }
+        input[type="submit"] {
+            font-size: 35px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            width: 250px;
+            padding: 0.5em 0.5em;
+            background-color: #27AAE1;
+            border: none;
+            float: left;
+            margin-bottom: 2em;
+            cursor: pointer;
+        }
+        input[type="text"] {
+            font-size: 30px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: 350;
+        }
+      /*-------------   END CONTACT FORM ------------*/
+
+      /*-------------   START PRODUCTS ------------*/
+        .produ p {
+            font-size: 40px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: 400;
+
+        }
+      /*-------------    END PRODUCTS ------------*/
+
+
+      /*----------------- Start About --------------------*/
+        .about h3 {
+            font-size: 60px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: bold;
+            margin: 0.2em 1em -0.5em 1.8em;
+        }
+        .about p{
+            padding: 40px 40px;
+            color: #27AAE1;
+            font-size: 60px;
+            font-family: myriad-pro, sans-serif;
+            font-style: italic;
+            font-weight: bold;
+            border-radius: 60px;
+        }
+        
+        .info {
+            margin: 15em 2em 15em 25em;
+        }
+        .info img {
+           width: 330px;
+           margin-left: 4em;
+        }
+        .info p {
+            margin: 0.5em;
+            color: black;
+            font-size: 40px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: 300;
+            border-radius: 40px;
+        }
+
+        /*---------Subscribe Box--------*/
+        .s {
+            background-color: #27AAE1;
+            margin: 1em 8em;
+        }
+        .s h3 {
+            font-size: 40px;
+            font-family: myriad-pro, sans-serif;
+            font-style: italic;
+            font-weight: bolder;
+            margin: 2em 10em;
+        }
+        .subscribe-ha {
+            margin-left: 17em;
+            margin-bottom: 2em;
+            background-color: black;
+            max-width: 1130px;
+            width: 100%;
+            position: relative;
+            border-radius: 80px;
+        }
+        .subscribe-ha input {
+            background: #000;
+            width: 100%;
+            padding: 70px 0px 70px 34px;
+            border: none;
+            border-radius: 40px;
+            font-size: 40px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: bolder;
+        }
+
+        .s-btn-a {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            background: #27AAE1;
+            padding: 60px 70px;
+            border-radius: 30px;
+            color: black;
+            font-size: 45px;
+            font-family: myriad-pro, sans-serif;
+            font-style: normal;
+            font-weight: bolder;
+            cursor: pointer;   
+        }
+      /*------------- End About ------------*/
+
+
+/* ____________________________________________
+
+    Footer
+   ____________________________________________*/
+
+        footer {
+            background-color: black;
+            margin-top: 1em;
+        }
+
+        .f-logo {
+            padding: 0.5em;
+            width: max-content;
+
+        }
+        footer h3 {
+            display: none;
+
+        }
+        
+        footer li, a {
+            width: auto;
+            color: #FDFEFF;
+            font-family: aria-text-g2, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 45px;
+        }
+        
+        footer p {
+            font-family: aria-text-g2, sans-serif;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 25px;
+        }
+        .follow {
+            margin-left: 0.5em;
+            padding: 30px 30px;
+        }
+        .follow p {
+            width: auto;
+            display: inline;
+        }
+        .copyright {
+            background: #FDFEFF;
+            align-self: center;
+            margin: auto;
+            margin-top: 3em;
+            margin-right: 8.5em;
+            padding: 5px 545px;
+            width: 4em 8em;
+        }
+        .copyright p {
+            font-size: 20px;
+        }
+ 
+
+        @media (max-width: 400px) {
+            .left {
+                width: 70%;
+            }
+            /*Hide the right column on small screens */
+            .right {
+                display: none
+            }
+        }
+    
+    }
