@@ -1,7 +1,7 @@
 ![alt text](hero-img-2.png "Logo Title Text 1")
 
 =============================================================================
- --------------------------  REVIEW YARD ----------------------------------
+                             REVIEW YARD  
 =============================================================================
 
 Review Yard is a product review website that gives off detailed analysis on each product present in a Tech world.
