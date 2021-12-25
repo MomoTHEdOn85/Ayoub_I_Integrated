@@ -248,9 +248,9 @@ ___________________________________________ */
         font-family: myriad-pro, sans-serif;
         font-style: normal;
         font-weight: 700;
-        margin-left: 6em;
-        margin-right: 43em;
-        padding: 2px;
+        margin-left: 4em;
+        margin-right: 45em;
+        padding: 0.5px 15px 1px 15px;
     }
 
 /* _____________________________________
@@ -584,20 +584,21 @@ _______________________________________________*/
         .left {
             float: left;
             width: 70%;
-            margin-top: 1.5em;
-            margin-right: 16em;
+            margin-top: 6em;
+            margin-right: 12em;
         }
 
         .right {
             display: table;
             margin-right: 3em;
             text-align: right;
-            font-size: 2em;
+            font-size: 4.5em;
         }
 
         .right p {
             background: #f1f1f1;
             padding: 15px 50px 15px 50px;
+            font-family: Arial;
         }
 
         .bar-row::after {
@@ -609,7 +610,7 @@ _______________________________________________*/
         .bar-cont {
             margin-left: 10em;
             width: 70%;
-            background-color: #f1f1f1;
+            background-color: #000;
             text-align: center;
             color: #FDFEFF;
         }
@@ -854,14 +855,6 @@ _______________________________________________*/
         }
  
 
-        @media (max-width: 400px) {
-            .left {
-                width: 70%;
-            }
-            /*Hide the right column on small screens */
-            .right {
-                display: none
-            }
-        }
+
     
     }
